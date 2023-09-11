@@ -1,3 +1,3 @@
 
 select {{dbt_utils.generate_surrogate_key(['id','first_name','last_name']) }} as customer_bk,
-* from raw.jaffle_shop.customers
+* from {{ env_var('DBT_SOURCEDB', 'RAW') }}.jaffle_shop.customers

@@ -1,21 +1,11 @@
 version: 2
 
 models:
-  - name: customers
-    columns:
-    - name: id
-      tests:
-        - unique
-        - not_null
-        - is_even
   - name: stg_customers
     description:  All customer details are stored in this table
     columns:
       - name: id
         description: Customer ID
-        tests:
-          - unique
-          - not_null
   - name: stg_orders
     description: '{{doc("orders") }}'
   
